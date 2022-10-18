@@ -1,0 +1,17 @@
+const axios = require("axios");
+
+const options = {
+  method: 'GET',
+  url: 'https://shazam-core.p.rapidapi.com/v1/artists/details',
+  params: {artist_id: '136975'},
+  headers: {
+    'X-RapidAPI-Key': '1211681d68msh89ee39fd9819839p1b0d07jsn25a94f452550',
+    'X-RapidAPI-Host': 'shazam-core.p.rapidapi.com'
+  }
+};
+
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
